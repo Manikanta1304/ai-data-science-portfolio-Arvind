@@ -26,3 +26,10 @@ Below, you will find documentation for two featured architectures that provide a
   * **Automated Drift Detection:** A "Watchdog" agent monitors data using Jensen-Shannon Distance and triggers retraining when necessary.
   * **Champion vs. Challenger System:** New models are automatically trained, shadow-tested, and promoted only if they outperform the current production model.
   * **Agentic Simulation Engine:** A Cortex-powered Text-to-SQL and simulation bot allows non-technical advisors to run live "what-if" scenarios (e.g., *"If we increase attendance by 10 hours, how does the churn risk change?"*) and retrieves prescriptive intervention strategies.
+ 
+### 3. AI Co-Pilot: Territory & Quota (T&Q) System Architecture
+* **File:** `AI Co-Pilot Territory and Quota System Architecture.pdf` *AI Co-Pilot.pdf*
+* **Overview:** An enterprise-grade Snowflake AI Agent designed to orchestrate Territory and Quota planning using a dual-engine approach
+* **Dual-Engine Logic:** Combines Cortex Analyst for semantic read-only reporting with Custom Python Workflow Tools for secure database mutations
+* **Context-Aware Routing:** Dynamically adapts data writes based on the planning cycle, writing Annual Planning directly to production while routing In-Year changes to staging tables for Sales Ops approval
+* **Strict Governance & Security:** Enforces Row-Level Security (RLS/RBAC) and mandates a PREVIEW -> CONFIRM -> EXECUTE pattern to prevent LLM hallucinations during financial updates
